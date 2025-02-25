@@ -12,9 +12,12 @@ const TURNS = {
 
 
 
-const Square = ({children, updateBoard, index}) => {
+const Square = ({children, isSelected, updateBoard, index}) => {
+  
+  const className = `square ${isSelected ? 'is-selected':''}`
+  
   return (
-    <div className='square'>
+    <div className={className}>
       {children}
     </div>
   )
@@ -26,6 +29,8 @@ function App() {
 /* Creamos un estado, para ello necesitamos el hook de useState*/
 /* Queremos que el tablero se renderice cada vez que hay un cambio de estado */
 const [board, setBoard] = useState(Array(9).fill(null))
+
+const [turn, setTurn] = useState(TURNS.X) // creamos otro estado para saber quien tiene el turno.
 
   return (
     <main className='board'>
@@ -44,6 +49,15 @@ const [board, setBoard] = useState(Array(9).fill(null))
             
         })
         }
+      </section>
+
+      <section className='turn'>
+        <Square isSelected={turn === TURNS.X}>
+          {TURNS.X}
+        </Square>
+        <Square isSelected={turn === TURNS.O}>
+          {TURNS.O}
+        </Square>
       </section>
     </main>
   )
