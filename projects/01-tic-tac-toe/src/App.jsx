@@ -29,7 +29,7 @@ const Square = ({children, isSelected, updateBoard, index}) => {
 
 const WINNER_COMBOS = [
   [0,1,2],
-  [3,4,6],
+  [3,4,5],
   [6,7,8],
   [0,3,6],
   [1,4,7],
@@ -65,6 +65,17 @@ const checkWinner = (boardToCheck) => {
 }
 
 
+const resetGame = () => {
+  setBoard(Array(9).fill(null))
+  setTurn(TURNS.X)
+  setWinner(null)
+}
+
+const checkEndGame = (newBoard)=> {
+//revisamos si hay empate si no existen espacios vacíos en el tablero
+
+return newBoard.every((square)=> square !== null)
+}
 
 
 const updateBoard = (index) =>{
@@ -82,7 +93,9 @@ if(board[index] || winner) return
   const newWinner = checkWinner(newBoard)
   if(newWinner){
     setWinner(newWinner)
-  } //TODO: check if game is over
+  }else if(checkEndGame(newBoard)){
+    setWinner(false)
+  }
 
 
 }
@@ -92,14 +105,14 @@ if(board[index] || winner) return
       <h1>Tic tac toe</h1>
       <section className='game'>
         {
-          board.map((_, index) => {
+          board.map((square, index) => {
             return (
               <Square
                 key={index}
                 index={index}
                 updateBoard={updateBoard}
               >
-                  {board[index]}
+                  {square}
               </Square>
             )
             
@@ -115,6 +128,34 @@ if(board[index] || winner) return
           {TURNS.O}
         </Square>
       </section>
+      
+      {
+
+        winner !== null && (
+          <section className='winner'>
+            <div className='text'>
+                <h2>
+                  {
+                    winner === false
+                    ? 'Empate'
+                    : 'Ganó'
+                  }
+                </h2>
+            
+                <header className='win'>
+                    {winner && <Square>{winner}</Square>}
+                </header>
+
+                <footer>
+                  <button onClick={resetGame}>Empezar de nuevo</button>
+                </footer>
+
+            </div>
+          </section>
+        )
+
+      }
+
     </main>
   )
 }
