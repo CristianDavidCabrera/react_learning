@@ -2,6 +2,7 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
+import confetti from 'canvas-confetti'
 
 
 
@@ -93,6 +94,7 @@ if(board[index] || winner) return
   const newWinner = checkWinner(newBoard)
   if(newWinner){
     setWinner(newWinner)
+    confetti()
   }else if(checkEndGame(newBoard)){
     setWinner(false)
   }
