@@ -24,9 +24,5 @@ export function WinnerModal({winner,resetGame}){
 
 }
 
-export const checkEndGame = (newBoard)=> {
-    //revisamos si hay empate si no existen espacios vacíos en el tablero
-  
-      return newBoard.every((square)=> square !== null)
-    }
+
   

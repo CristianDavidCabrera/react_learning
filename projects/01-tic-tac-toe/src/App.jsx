@@ -5,7 +5,7 @@ import './App.css'
 import confetti from 'canvas-confetti'
 import { Square } from './components/Square.jsx'
 import { TURNS } from './constants.js'
-import { checkWinnerFrom } from './logic/board.js'
+import { checkWinnerFrom, checkEndGame } from './logic/board.js'
 import { WinnerModal} from './components/WinnerModal.jsx'
 
 
@@ -31,12 +31,6 @@ function App() {
 
     window.localStorage.removeItem('board')
     window.localStorage.removeItem('turn')
-  }
-
-  const checkEndGame = (newBoard)=> {
-  //revisamos si hay empate si no existen espacios vacíos en el tablero
-
-    return newBoard.every((square)=> square !== null)
   }
 
 
