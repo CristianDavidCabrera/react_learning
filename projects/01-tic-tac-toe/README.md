@@ -3,9 +3,6 @@
 ## 🎲 Descripción
 Este proyecto es un juego clásico de **Tic-Tac-Toe** (Tres en raya) desarrollado con **React**. Es una excelente práctica para aprender conceptos fundamentales de **React**, como el uso de **hooks**, **prop-types**, **componentes reutilizables** y la **gestión del estado**.
 
-## 🚀 Demo
-¡[Prueba el juego aquí!](#)
-
 ---
 
 ## 📁 Estructura del Proyecto
@@ -59,7 +56,7 @@ npm run dev
 
 ---
 
-## 🚧 Mejoras Futuras
+## 🚧 Posibles Mejoras Futuras
 - Añadir un modo de juego contra la IA.
 - Permitir la personalización de símbolos.
 - Añadir animaciones de transición en las jugadas.
@@ -75,7 +72,6 @@ npm run dev
 ---
 
 ## 📝 Licencia
-Este proyecto es un ejercicio realizado como parte del curso gratuito de REACT impartido por **midudev**. Se ha desarrollado únicamente con fines educativos y de aprendizaje. No posee una licencia específica y no se recomienda su uso en proyectos comerciales.
-
+Este proyecto es un ejercicio realizado como parte de mis prácticas de desarrollo con React. Se ha desarrollado únicamente con fines educativos y de aprendizaje. No posee una licencia específica y no se recomienda su uso en proyectos comerciales.
 
 
