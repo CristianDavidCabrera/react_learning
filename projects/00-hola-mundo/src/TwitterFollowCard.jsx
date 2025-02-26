@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import { useState } from 'react';
 
 export function TwitterFollowCard({children, userName, initialIsFollowing}){
@@ -33,8 +34,7 @@ export function TwitterFollowCard({children, userName, initialIsFollowing}){
             <header className='tw-followCard-header'>
                 <img 
                     className='tw-followCard-avatar'
-                    alt="avatar" 
-                    //src={`https://unavatar.io/twitch/${userName}`}  
+                    alt="avatar"  
                     src={`/images/${userName}.jpeg`}   
                 />
                 <div className='tw-followCard-info'>
@@ -62,3 +62,10 @@ export function TwitterFollowCard({children, userName, initialIsFollowing}){
 
 // Cuando se renderiza un componente padre, 
 // también se renderizan los componentes hijos (aunque no haya sufrido cambios)
+
+// Validación de props
+TwitterFollowCard.propTypes = {
+    children: PropTypes.node.isRequired,  // Validación para children (puede ser cualquier contenido)
+    userName: PropTypes.string.isRequired,  // userName debe ser una cadena de texto y es obligatorio
+    initialIsFollowing: PropTypes.bool  // initialIsFollowing debe ser un booleano
+};
