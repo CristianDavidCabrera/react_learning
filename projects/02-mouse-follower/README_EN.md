@@ -6,6 +6,12 @@ This project is a fun and interactive **mouse pointer** that follows the user's 
 
 ---
 
+## 🚀 Demo  
+
+🌐 **[Take a look!!](https://mousefollower-cristian-david.netlify.app/)** 🚀
+
+---
+
 ## 📁 Project Structure
 The project has the following file structure:
 
