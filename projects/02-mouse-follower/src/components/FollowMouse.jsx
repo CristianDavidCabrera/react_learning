@@ -32,8 +32,6 @@ export const FollowMouse = () => {
    * @returns {void}
    */
   useEffect(() => {
-    console.log("efecto", { enabled });
-
     const handleMove = (event) => {
       const { clientX, clientY } = event;
       console.log("handleMove", { clientX, clientY });
