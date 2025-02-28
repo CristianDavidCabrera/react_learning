@@ -29,7 +29,8 @@ El proyecto cuenta con la siguiente estructura de archivos:
 │   ├── App.css
 │   └── main.jsx
 ├── package.json
-└── README.md
+└── README_EN.md
+└── README_ES.md
 ```
 
 ---

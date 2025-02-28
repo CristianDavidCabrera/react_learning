@@ -30,7 +30,8 @@ The project has the following file structure:
 │   ├── App.css
 │   └── main.jsx
 ├── package.json
-└── README.md
+└── README_EN.md
+└── README_ES.md
 ```
 
 ---
