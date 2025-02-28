@@ -5,6 +5,12 @@ Este proyecto es un juego clásico de **Tic-Tac-Toe** (Tres en raya) desarrollad
 
 ---
 
+## 🚀 Demo  
+
+🌐 **[Juega ahora!](https://cristian-david-tic-tac-toe.netlify.app/)** 🚀
+
+---
+
 ## 📁 Estructura del Proyecto
 El proyecto cuenta con la siguiente estructura de archivos:
 

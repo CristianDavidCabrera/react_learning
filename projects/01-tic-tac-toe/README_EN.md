@@ -6,6 +6,12 @@ This project is a classic **Tic-Tac-Toe** (Noughts and Crosses) game developed w
 
 ---
 
+## 🚀 Demo  
+
+🌐 **[Play now!](https://cristian-david-tic-tac-toe.netlify.app/)** 🚀
+
+---
+
 ## 📁 Project Structure
 The project has the following file structure:
 
